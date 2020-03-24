@@ -21,3 +21,11 @@ $ sudo docker start mongo-container-name
 ```
 $ sudo docker exec -it mongo-container-name bash
 ```
+
+## MongoDB Statements
+
+**createCollection**
+
+```
+$ db.createCollection('student')
+```
