@@ -35,3 +35,9 @@ $ db.createCollection('student')
 ```
 $ db.student.insert({ name: 'John Doe', date_of_birth: new Date(1990, 6, 11) })
 ```
+
+**find**
+
+```
+$ db.student.find()
+```
