@@ -41,3 +41,9 @@ $ db.student.insert({ name: 'John Doe', date_of_birth: new Date(1990, 6, 11) })
 ```
 $ db.student.find()
 ```
+
+**remove**
+
+```
+$ db.student.remove({ '_id': ObjectId('5e7c1e0c37e168cf1dabbf16') })
+```
