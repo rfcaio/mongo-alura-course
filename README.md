@@ -33,13 +33,44 @@ $ db.createCollection('student')
 **insert**
 
 ```
-$ db.student.insert({ name: 'John Doe', date_of_birth: new Date(1990, 6, 11) })
+$ db.student.insert({
+  name: 'John Doe',
+  date_of_birth: new Date(1990, 6, 11),
+  languages: [
+    {
+      description: 'Portuguese',
+      level: 'Fluent'
+    },
+    {
+      description: 'English',
+      level: 'Intermediate'
+    }
+  ]
+})
 ```
 
 **find**
 
 ```
 $ db.student.find()
+```
+
+Getting by a specific attribute:
+
+```
+$ db.student.find({ name: 'John Doe' })
+```
+
+Getting by a specific attribute in a list:
+
+```
+$ db.student.find({ 'languages.description': 'Portuguese' })
+```
+
+Getting by multiple attributes:
+
+```
+$ db.student.find({ name: 'John Doe', languages.description': 'Portuguese' })
 ```
 
 **remove**
