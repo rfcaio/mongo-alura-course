@@ -73,6 +73,18 @@ Getting by multiple attributes:
 $ db.student.find({ name: 'John Doe', languages.description': 'Portuguese' })
 ```
 
+Using `$or`:
+
+```
+$ db.student.find({ $or: [{ name: 'John' }, { name: 'Ana' }] })
+```
+
+Using `$in`:
+
+```
+$ db.student.find({ 'languages.level': { $in: ['Intermediate', 'Fluent'] } })
+```
+
 **remove**
 
 ```
