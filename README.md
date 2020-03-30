@@ -90,3 +90,30 @@ $ db.student.find({ 'languages.level': { $in: ['Intermediate', 'Fluent'] } })
 ```
 $ db.student.remove({ '_id': ObjectId('5e7c1e0c37e168cf1dabbf16') })
 ```
+
+**update**
+
+Replacing all document:
+
+```
+$ db.student.update({ '_id': ObjectId('5e7c1e0c37e168cf1dabbf16') }, { name: 'John Connor' })
+```
+
+Updating just an attribute:
+
+```
+$ db.student.update(
+  { '_id': ObjectId('5e7c1e0c37e168cf1dabbf16') },
+  { $set: { name: 'John Connor' } }
+)
+```
+
+Updating multiple documents:
+
+```
+$ db.student.update(
+  {},
+  { $set: { course: { name: 'Computer Science' } } },
+  { multi: true }
+)
+```
