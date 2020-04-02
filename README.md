@@ -117,3 +117,34 @@ $ db.student.update(
   { multi: true }
 )
 ```
+
+Updating an array:
+
+```
+$ db.student.update(
+  { _id: ObjectId('5e7c1e0c37e168cf1dabbf16') },
+  {
+    $push: {
+      languages: { description: 'Portuguese', level: 'Fluent' }
+    }
+  }
+)
+```
+
+Inserting multiple values in an array:
+
+```
+$ db.student.update(
+  { _id: ObjectId('5e7c1e0c37e168cf1dabbf16') },
+  {
+    $push: {
+      languages: {
+        $each: [
+          { description: 'French', level: 'Intermediate' },
+          { description: 'Portuguese', level: 'Fluent' }
+        ]
+      }
+    }
+  }
+)
+```
