@@ -85,6 +85,12 @@ Using `$in`:
 $ db.student.find({ 'languages.level': { $in: ['Intermediate', 'Fluent'] } })
 ```
 
+Using `$gt`:
+
+```
+$ db.student.find({ date_of_birth: { $gt: new Date(1995, 0, 1) } })
+```
+
 **remove**
 
 ```
