@@ -103,6 +103,21 @@ $ db.student.findOne({ date_of_birth: { $gt: new Date(1995, 0, 1) } })
 $ db.student.remove({ '_id': ObjectId('5e7c1e0c37e168cf1dabbf16') })
 ```
 
+**sort**
+
+Sorting in ascending order:
+
+```
+$ db.student.find().sort({ name: 1 })
+```
+
+
+Sorting in descending order:
+
+```
+$ db.student.find().sort({ name: -1 })
+```
+
 **update**
 
 Replacing all document:
