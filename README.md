@@ -97,6 +97,12 @@ $ db.student.find({ date_of_birth: { $gt: new Date(1995, 0, 1) } })
 $ db.student.findOne({ date_of_birth: { $gt: new Date(1995, 0, 1) } })
 ```
 
+**limit**
+
+```
+$ db.student.find().limit(3)
+```
+
 **remove**
 
 ```
