@@ -4,19 +4,19 @@
 
 ## Getting started with Docker
 
-**Creating a container**
+### Creating a container
 
 ```
 $ sudo docker run --name mongo-container-name -d mongo
 ```
 
-**Starting a existing container**
+### Starting a existing container
 
 ```
 $ sudo docker start mongo-container-name
 ```
 
-**Acessing MongoDB CLI in a container**
+### Acessing MongoDB CLI in a container
 
 ```
 $ sudo docker exec -it mongo-container-name bash
@@ -24,13 +24,13 @@ $ sudo docker exec -it mongo-container-name bash
 
 ## MongoDB Statements
 
-**createCollection**
+### createCollection
 
 ```
 $ db.createCollection('student')
 ```
 
-**insert**
+### insert
 
 ```
 $ db.student.insert({
@@ -49,7 +49,7 @@ $ db.student.insert({
 })
 ```
 
-**find**
+### find
 
 ```
 $ db.student.find()
@@ -91,25 +91,25 @@ Using `$gt`:
 $ db.student.find({ date_of_birth: { $gt: new Date(1995, 0, 1) } })
 ```
 
-**findOne**
+### findOne
 
 ```
 $ db.student.findOne({ date_of_birth: { $gt: new Date(1995, 0, 1) } })
 ```
 
-**limit**
+### limit
 
 ```
 $ db.student.find().limit(3)
 ```
 
-**remove**
+### remove
 
 ```
 $ db.student.remove({ '_id': ObjectId('5e7c1e0c37e168cf1dabbf16') })
 ```
 
-**sort**
+### sort
 
 Sorting in ascending order:
 
@@ -124,7 +124,7 @@ Sorting in descending order:
 $ db.student.find().sort({ name: -1 })
 ```
 
-**update**
+### update
 
 Replacing all document:
 
