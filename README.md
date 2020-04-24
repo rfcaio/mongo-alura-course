@@ -10,7 +10,7 @@
 $ sudo docker run --name mongo-container-name -d mongo
 ```
 
-### Starting a existing container
+### Starting an existing container
 
 ```
 $ sudo docker start mongo-container-name
